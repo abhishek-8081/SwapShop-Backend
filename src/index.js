@@ -20,6 +20,10 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.pogetst("/", async (req, res) => {
+    res.status(200).json({msg:"Server is running"});
+
+});
 app.post("/login", async (req, res) => {
     const data = req.body;
     let response = await LoginHandler(data);
