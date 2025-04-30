@@ -20,7 +20,7 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.pogetst("/", async (req, res) => {
+app.get("/", async (req, res) => {
     res.status(200).json({msg:"Server is running"});
 
 });
